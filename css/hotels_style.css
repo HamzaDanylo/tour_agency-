@@ -1,0 +1,179 @@
+:root {
+  --back-head: #2E86AB;
+  --first-color-hover: #F4A261;
+  --second-color-hover: #A1C181;
+  --background-color: #F7F7F7;
+  --text-color: #333333;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Заголовок секції */
+.articl_2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  color: var(--text-color);
+}
+
+/* Секція ТУРИ */
+#sales_id {
+  position: relative;
+  top: 50px;
+  width: 100%;
+  padding: 50px 0;
+}
+
+/* Контейнер для блоків турів */
+#pos_sales_blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Окремий тур */
+.sales_block {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 auto;
+}
+
+.sales_block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Зображення */
+.sales_img_container {
+  width: 100%;
+  height: 100%;
+}
+
+.sales_block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.sales_info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(244, 162, 97, 0.9);
+  color: var(--text-color);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+.sales_title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.sales_hotel {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sales_price {
+  font-size: 20px;
+  font-weight: bold;
+}
+.sales_price::before {
+  content: 'від';
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-right: 0.5rem;
+  opacity: 0.8;
+}
+.sales_block:hover img {
+  transform: scale(1.1);
+}
+
+.sales_block:hover .sales_info {
+  transform: translateY(0);
+}
+
+/* Стилі для кнопки "В обране" */
+.favorite_btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.sales_block:hover .favorite_btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.heart_icon {
+  width: 18px;
+  height: 18px;
+  fill: #e74c3c;
+  transition: all 0.3s ease;
+}
+
+.favorite_btn:hover {
+  background: white;
+  transform: scale(1.1);
+}
+
+.favorite_btn:hover .heart_icon {
+  transform: scale(1.2);
+}
+
+/* Активний стан */
+.favorite_btn.active {
+  background: #e74c3c;
+}
+
+.favorite_btn.active .heart_icon {
+  fill: white;
+}
+
+

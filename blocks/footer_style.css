@@ -1,0 +1,143 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    background-color: var(--back-head);
+    min-height: 15vh;
+    height: auto;
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+    flex-shrink: 0; /* Забороняє зменшуватись */
+    position: relative;
+    margin-top: auto; /* Притискає до низу */
+}
+.footer_block{
+    display: flex;
+    flex-flow: column wrap;
+    height: 10vh;
+    width: 50px;
+    font-family: var(--font-style);
+    font-size: 1em;
+}
+
+.footer_block h1{
+    font-family: var(--font-style);
+    font-size: 1em;
+    text-align: center;
+}
+
+.address_style a{
+    font-family: var(--font-style);
+    font-size: 1em;
+    color: var(--text-color);
+    text-decoration: none;
+    text-emphasis: none;
+}
+
+
+#address_style_li_phone{
+    list-style-image: url(../images/footer_list_icons/telephone.png);
+}
+
+#address_style_li_mail{
+    list-style-image: url(../images/footer_list_icons/mail.png);
+}
+
+#footer_logo{
+    font-family: var(--font-style);
+    text-decoration: none;
+    color: var(--first-color-hover);
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+} 
+/* Стилі для іконки адміна */
+.admin-icon {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.2);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.admin-icon:hover {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+/* Для мобільних пристроїв */
+@media (max-width: 768px) {
+    .footer_block {
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+
+    .footer_block h1 {
+        margin-bottom: 10px;
+        font-size: 1.2em;
+    }
+
+    .address_style ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .address_style a {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    #footer_logo {
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 15px;
+        gap: 15px;
+        width: 100%;
+    }
+    .footer_block {
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+    .footer_block h1 {
+        font-size: 1em;
+    }
+
+    .address_style a {
+        font-size: 0.95em;
+    }
+
+    #footer_logo {
+        font-size: 20px;
+    }
+
+    .admin-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+}
+

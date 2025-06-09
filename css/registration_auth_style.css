@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --back-head: #2E86AB;
+    --first-color-hover: #F4A261;
+    --second-color-hover: #A1C181;
+    --background-color: #F7F7F7;
+    --text-color: #333333;
+    --font-size-articl: 1.8em;
+    --font-style: 'Montserrat', sans-serif;
+}
+
+html,body {
+    background-color: var(--background-color);
+    font-family: var(--font-style);
+    overflow: hidden;
+}
+
+.form-wrapper {
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_class {
+    background-color: #e6f2f8;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 15px;
+    padding: 30px 25px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.form_class h1 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    color: var(--text-color);
+}
+
+form div {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: var(--back-head);
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--back-head);
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--first-color-hover);
+}
+.form-switch {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: var(--text-color);
+}
+.form-switch a {
+    color: var(--back-head);
+    text-decoration: none;
+    font-weight: bold;
+}
+.form-switch a:hover {
+    text-decoration: underline;
+}
+.error{
+    color: red;
+    padding-top: 5px;
+    font-size: 1em;
+}
